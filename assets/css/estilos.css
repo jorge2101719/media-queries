@@ -48,8 +48,7 @@ footer {
 }
 
 
-/* otro elementos para la visión mobile */
-
+/* otros elementos para la visión mobile */
 .nav-titulo {
     display: flex;
     justify-content: space-evenly;
@@ -70,6 +69,7 @@ header select {
     width: 90%;
     padding: 1%;
     font-size: 1rem;
+    border-radius: 5px;
 }
 
 
@@ -106,8 +106,8 @@ header select {
     font-size: 1.2rem;
 }
 
-/* se define card-bis luego de todo lo anterior, para que funcione */
-.card-bis {
+/* se define card-bis y card-bis-special luego de todo lo anterior, para que funcione */
+.card-bis, .card-bis-special {
     display: none;
 }
 
@@ -159,9 +159,120 @@ footer p {
 
 
 
+
+
+
+/* modelo Tablet: desarrollo opcional no calificado */
+
+@media (min-width: 576px) {
+    /* se modifica la clase mobile, para invisibilizar la hamburguesa del menú */
+    .mobile {
+        display: none;
+    }
+
+    /* se redefinen los elementos del navegador */
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-menu {
+        display: contents;
+    }
+
+    .nav-menu ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-menu ul li {
+        margin-bottom: 1.2rem;
+        margin-left: 20px;
+    }
+
+    /* modicaciones a header */
+    header {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    /* redefiniciones de cards y sus elementos */
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* redefinición de los elementos de las cards */
+    /* se anula visión de la clase card-bis-special */
+    .card-bis-special {
+        display: none;
+    }
+
+    /* copia de los estilos anteriores */
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 1%;
+        border: solid 1px gray;
+        border-radius: 5px;
+        padding: 1%;
+        padding-bottom: 10%;
+    }
+    
+    .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+    
+    .card p {
+        font-size: 1.2rem;
+    }
+
+    /* se anula la visión de las tarjetas con clase card-bis */
+    .card-bis {
+        display: none;
+    }
+    
+    /* modificaciones al footer */
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* grid areas: punto 2 de la documentación */
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-template-areas: 
+        "nav nav nav nav nav"
+        "header main main main main"
+        "pie pie pie pie pie";
+    }
+}
+
+
+
+
+
+
+
+
+
+
 /* ------------------------------------------------------------------------ */
 /* modificaciones con media queries: punto 1 de la documentación */
-@media (min-width: 576px) {
+/* se modifico el valor de 576 a 992 porque se ha incluido la definición para Tablet */
+
+@media (min-width: 992px) {
     /* se modifica la clase mobile, para invisibilizar la hamburguesa del menú */
     .mobile {
         display: none;
@@ -190,6 +301,7 @@ footer p {
     }
 
     .nav-menu ul li {
+        margin: 0;
         margin-bottom: 1.2rem;
     }
 
@@ -240,6 +352,7 @@ footer p {
         align-items: center;
     }
 
+    /* grid areas: punto 2 de la documentación */
     .grid-container {
         display: grid;
         grid-template-columns: 1fr 4fr;
@@ -249,3 +362,11 @@ footer p {
         "pie main main main main";
     }
 }
+
+
+
+
+
+
+
+
