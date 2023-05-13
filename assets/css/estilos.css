@@ -13,7 +13,7 @@ nav {
     display: flex; /* uso de flex a sugerencia de la documentación: punto 3 */
     justify-content: space-between;
     align-items: center;
-    padding: 2%;
+    padding: 1%;
 }
 
 header {
@@ -199,19 +199,15 @@ footer p {
         justify-content: flex-start;
     }
 
-    /* redefiniciones de cards y sus elementos */
+    /* redefiniciones de cards y sus elementos para que muestre dos columnas */
     .cards {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
     
     /* redefinición de los elementos de las cards */
-    /* se anula visión de la clase card-bis-special */
-    .card-bis-special {
-        display: none;
-    }
-
     /* copia de los estilos anteriores */
+    /* el quiebre hace visible el elemento con clase card-bis-special */
     .card {
         display: flex;
         flex-direction: column;
@@ -237,9 +233,11 @@ footer p {
     }
 
     /* se anula la visión de las tarjetas con clase card-bis */
+    /* esto es necesrio, pues el quiebre anula la instrucción dada anteriormente*/
     .card-bis {
         display: none;
     }
+
     
     /* modificaciones al footer */
     footer {
@@ -252,6 +250,7 @@ footer p {
     .grid-container {
         display: grid;
         grid-template-columns: 1fr 4fr;
+        /* grid-template-rows: 1fr 3fr 1fr; */
         grid-template-areas: 
         "nav nav nav nav nav"
         "header main main main main"
@@ -305,7 +304,8 @@ footer p {
         margin-bottom: 1.2rem;
     }
 
-    /* redefiniciones de cards y sus elementos */
+    /* redefiniciones de cards y sus elementos, para que muestre cuatro columnas */
+    /* el quiebre anula, por defecto, las instrucciones de invisibilidad de card-bis y card-bis-special */
     .cards {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -314,10 +314,6 @@ footer p {
     /* redefinición de los elementos de las cards */
     /* en este caso se debe primero visibilizarlas/*
     /* y luego volver a incluir los estilos definidos anteriormente */
-    .card-bis {
-        display: contents;
-    }
-
     /* copia de los estilos anteriores */
     .card {
         display: flex;
