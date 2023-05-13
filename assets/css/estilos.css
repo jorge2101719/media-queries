@@ -9,7 +9,7 @@ body {
 /* se cumple con el punto 4 del desafío */
 nav {
     grid-area: nav;
-    background-color: midnightblue;
+    background-color: mediumblue;
     color: white;
     display: flex; /* uso de flex a sugerencia de la documentación: punto 3 */
     justify-content: space-between;
@@ -144,10 +144,39 @@ footer p {
 }
 
 
-/* modificaciones con media queries */
+/* modificaciones con media queries: punto 1 de la documentación */
 @media (min-width: 576px) {
     .mobile {
         display: none;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 40px;
+    }
+
+    .nav-menu {
+        display: contents;
+    }
+
+    .nav-menu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-menu ul li {
+        margin-bottom: 1.2rem;
+    }
+
+    .desktopo-only {
+        display: contents;
     }
 
     .grid-container {
