@@ -156,12 +156,17 @@ footer p {
 }
 
 
+
+
+/* ------------------------------------------------------------------------ */
 /* modificaciones con media queries: punto 1 de la documentación */
 @media (min-width: 576px) {
+    /* se modifica la clase mobile, para invisibilizar la hamburguesa del menú */
     .mobile {
         display: none;
     }
 
+    /* se redefinen los elementos del navegador */
     nav {
         display: flex;
         flex-direction: column;
@@ -187,15 +192,51 @@ footer p {
         margin-bottom: 1.2rem;
     }
 
+    /*  */
 
+    .cards {
+        display: flex;
+        gap: 5px; /* se agrega espacio entre elementos*/
+    }
+    
+    /* redefinición de los elementos de las cards */
+    /* en este caso se debe primero visibilizarlas/*
+    /* y luego volver a incluir los estilos definidos anteriormente */
+    .card-bis {
+        display: contents;
+    }
+
+    /* copia de los estilos anteriores */
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 1%;
+        border: solid 1px gray;
+        border-radius: 5px;
+        padding: 1%;
+    }
+    
+    .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+    
+    .card p {
+        font-size: 1.2rem;
+    }
+    
+    
+    
+    /* modificaciones al footer */
     footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-
-    .desktopo-only {
-        display: contents;
     }
 
     .grid-container {
