@@ -19,7 +19,7 @@ nav {
 header {
     padding: 1%;
     grid-area: header;
-    background-color: gray;
+    background-color: lightgray;
     display: flex; /* uso de flex para cumplir con el punto 3 de la documentación */
     justify-content: center;
     align-items: center;
@@ -120,6 +120,7 @@ main button {
     font-size: 1.2rem;
     font-weight: 900;
     border-radius: 5px;
+    padding: 3%;
 }
 
 .lista-numeros {
