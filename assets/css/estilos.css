@@ -68,7 +68,7 @@ footer {
 
 /* elementos del header */
 header select {
-    width: 70%;
+    width: 90%;
     padding: 1%;
     font-size: 1rem;
 }
@@ -76,6 +76,12 @@ header select {
 
 
 /* elementos de main */
+/* definición de cards */
+.cards {
+    display: flex;
+}
+
+/* definición de cada card */
 .card {
     display: flex;
     flex-direction: column;
@@ -97,6 +103,11 @@ header select {
 
 .card p {
     font-size: 1.2rem;
+}
+
+/* se define card-bis luego de todo lo anterior, para que funcione */
+.card-bis {
+    display: none;
 }
 
 main button {
@@ -175,6 +186,7 @@ footer p {
     .nav-menu ul li {
         margin-bottom: 1.2rem;
     }
+
 
     footer {
         display: flex;
