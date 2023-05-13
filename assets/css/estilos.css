@@ -78,7 +78,8 @@ header select {
 /* elementos de main */
 /* definición de cards */
 .cards {
-    display: flex;
+    display: grid;
+    gap: 10px;
 }
 
 /* definición de cada card */
@@ -192,11 +193,10 @@ footer p {
         margin-bottom: 1.2rem;
     }
 
-    /*  */
-
+    /* redefiniciones de cards y sus elementos */
     .cards {
-        display: flex;
-        gap: 5px; /* se agrega espacio entre elementos*/
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
     }
     
     /* redefinición de los elementos de las cards */
