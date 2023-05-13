@@ -61,6 +61,7 @@ footer {
 
 .nav-menu {
     display: none;
+    align-items: center;
 }
 
 
@@ -162,7 +163,7 @@ footer p {
 
 
 
-/* modelo Tablet: desarrollo opcional no calificado */
+/* modelo Tablet: desarrollo opcional (no calificado) */
 
 @media (min-width: 576px) {
     /* se modifica la clase mobile, para invisibilizar la hamburguesa del menú */
@@ -177,20 +178,23 @@ footer p {
         justify-content: space-between;
     }
 
+    /* en este caso se hace necesario para visualizar el menú */
     .nav-menu {
         display: contents;
     }
 
     .nav-menu ul {
         display: flex;
+        align-items: center;
         list-style-type: none;
         margin: 0;
         padding: 0;
+        margin-top: 1rem; /* necesario para dar mejor efecto de alineación horizontal */
     }
 
     .nav-menu ul li {
         margin-bottom: 1.2rem;
-        margin-left: 20px;
+        margin-right: 20px;
     }
 
     /* modicaciones a header */
@@ -286,6 +290,7 @@ footer p {
         gap: 40px;
     }
 
+    /* necesario para visualizar menú */
     .nav-menu {
         display: contents;
     }
