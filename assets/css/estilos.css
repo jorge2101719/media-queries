@@ -48,7 +48,7 @@ footer {
 }
 
 
-/* otros elementos para la visión mobile */
+/* definiciones básicas para la visión mobile */
 .nav-titulo {
     display: flex;
     justify-content: space-evenly;
@@ -148,7 +148,7 @@ main button {
 }
 
 footer p {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 900;
     text-align: center;
 }
