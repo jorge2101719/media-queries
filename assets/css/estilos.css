@@ -98,6 +98,7 @@ header select {
     border-radius: 5px;
     padding: 1%;
     padding-bottom: 10%;
+    box-shadow: 5px 5px 5px lightgray;
 }
 
 .card img {
