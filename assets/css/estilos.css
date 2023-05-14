@@ -19,7 +19,7 @@ nav {
 header {
     padding: 1%;
     grid-area: header;
-    background-color: lightgray;
+    background-color: lightblue;
     display: flex; /* uso de flex para cumplir con el punto 3 de la documentación */
     justify-content: center;
     align-items: center;
