@@ -4,7 +4,7 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-/* se declaran cuatro secciones: nav, header, main y footer */
+/* se declaran cuatro (4) secciones: nav, header, main y footer */
 /* se cumple con el punto 4 del desafío */
 nav {
     grid-area: nav;
@@ -56,12 +56,16 @@ footer {
 }
 
 .nav-titulo i {
-    margin-right: 7px;
+    margin-right: 10px;
 }
 
 .nav-menu {
     display: none;
     align-items: center;
+}
+
+nav i {
+    margin-right: 10px;
 }
 
 
